@@ -4,26 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoubleTune Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
             padding: 20px;
+            color: white;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: auto;
-            background: white;
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
         }
         h1 {
-            color: #333;
+            color: #ffcc00;
+            animation: fadeIn 2s ease-in-out;
         }
-        .contact-info {
-            margin-top: 15px;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
             font-size: 18px;
         }
         .services {
@@ -52,29 +69,31 @@
     </style>
 </head>
 <body>
-
-    <div class="container">
+    <div class="container" data-aos="fade-up">
+        <img src="logo.png" alt="DoubleTune Studio Logo" class="logo">
         <h1>Welcome to DoubleTune Studio!</h1>
-
-        <div class="contact-info">
-            <p>📩 <strong>Email:</strong> <a href="mailto:doubletunestudio@gmail.com">doubletunestudio@gmail.com</a></p>
-            <p>📞 <strong>Phone:</strong> <a href="tel:+2349135133053">+2349135133053</a></p>
-            <p>📱 <strong>Social Media:</strong> @doubletunestudio</p>
-        </div>
-
-        <h2>Our Services</h2>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <h2 id="services">Our Services</h2>
         <ul class="services">
             <li>Commercial Ads</li>
             <li>Photoshoot</li>
             <li>Video Production</li>
             <li>Content Creation</li>
-            <li>Video Creation</li>
             <li>Music Production</li>
             <li>Photography</li>
         </ul>
-
-        <a href="mailto:doubletunestudio@gmail.com" class="btn">Contact Us</a>
+        <h2 id="contact">Contact Us</h2>
+        <p>📩 <strong>Email:</strong> <a href="mailto:doubletunestudio@gmail.com" style="color: yellow;">doubletunestudio@gmail.com</a></p>
+        <p>📞 <strong>Phone:</strong> <a href="tel:+2349135133053" style="color: yellow;">+2349135133053</a></p>
+        <p>📱 <strong>Social Media:</strong> @doubletunestudio</p>
+        <a href="mailto:doubletunestudio@gmail.com" class="btn">Get in Touch</a>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
